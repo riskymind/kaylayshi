@@ -2,102 +2,49 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+      <section>
+        <a href="">
+          <Image src="/profile_img.jpg" alt="Profile picture" width={180} height={180} priority
+          className="rounded-full bg-gray-100 block lg:mt-5 mt-10 lg:mb-5 mb-10 mx-auto sm:float-right sm:ml-5 sm:mb-5 grayscale hover:grayscale-0 object-contain w-auto"/>
+        </a>
+        <h1 className="mb-8 text-2xl font-medium ">Software Engineer</h1>
+        <div className="">
+          <p>
+            👋 Hi, {"I'm"} Kelechi Opara - a passionate Software Engineer with expertise in building scalable and high-performance applications. 
+          </p>
+          <br />
+          <p>
+          With a strong foundation in React, Next.js, MERN Stack, Python, Django, Flask, Kotlin, and Android Development, 
+          I specialize in creating full-stack applications and AI-driven solutions that solve real-world problems.
+          </p>
+          <br />
+          <p>
+          💡 My journey in software engineering is fueled by a deep understanding of computer science fundamentals, algorithms, and modern frameworks. 
+          My ability to architect, develop, and deploy applications seamlessly across web and mobile platforms sets me apart in the tech landscape.
+          </p>
+          <div className="mt-4">
+            <h4>🎓 I have earned certifications from {"Harvard's"} CS50 courses, including:</h4>
+            <br />
+            <ul className="list-disc">
+              <li>CS50x: Mastery of computer science fundamentals</li>
+              <li>CS50AI: Specialization in Artificial Intelligence</li>
+              <li>CS50Python: Proficiency in Python programming</li>
+              <li>CS50SQL: Advanced database management and query optimization</li>
+            </ul>
+            <br />
+            <p>🔬 My passion extends into AI and Machine Learning, where I explore ways to integrate intelligent systems into applications, improving efficiency and automation.</p>
+          </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          <div>
+            <p className="mt-8">
+            🚀 Whether {"it's"} building intuitive user experiences, optimizing backend performance, or deploying AI models, I thrive in dynamic and challenging environments that push the boundaries of innovation.
+            </p>
+            <br />
+            <p>📩 {"Let's"} connect and build something amazing together!</p>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </section>
   );
 }
+
+
