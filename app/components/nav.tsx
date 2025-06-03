@@ -22,7 +22,7 @@ export function Navbar() {
     <nav className="lg:mb-16 mb-12 py-5">
       <div className="flex flex-col md:flex-row md:items-center justify-between">
         <div className="flex items-center justify-between w-full md:w-auto">
-          <Link href="/" className="text-3xl font-semibold tracking-tight hover:underline hover:underline-offset-8 hover:italic text-yellow-300">
+          <Link href="/" className="text-3xl font-semibold tracking-tight hover:underline hover:underline-offset-8 hover:italic text-gray-800 dark:text-yellow-300">
             {metaData.title}
           </Link>
 
