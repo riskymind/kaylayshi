@@ -5,16 +5,16 @@ export default function Home() {
       <section>
         <a href="">
           <Image src="/profile_img.jpg" alt="Profile picture" width={180} height={180} priority
-          className="rounded-full bg-gray-100 block lg:mt-5 mt-10 lg:mb-5 mb-10 mx-auto sm:float-right sm:ml-5 sm:mb-5 grayscale hover:grayscale-0 object-contain w-auto"/>
+          className="rounded-full bg-gray-100 block lg:mt-5 mt-10 lg:mb-5 mb-10 mx-auto sm:float-right sm:ml-5 sm:mb-5 grayscale hover:grayscale-0 object-contain w-50 h-50"/>
         </a>
-        <h1 className="mb-8 text-2xl font-medium ">Software Engineer</h1>
+        <h1 className="mb-8 text-2xl font-medium text-yellow-300">Software Engineer</h1>
         <div className="">
           <p>
             👋 Hi, {"I'm"} Kelechi Opara - a passionate Software Engineer with expertise in building scalable and high-performance applications. 
           </p>
           <br />
           <p>
-          With a strong foundation in React, Next.js, MERN Stack, Python, Django, Flask, Kotlin, and Android Development, 
+          With a strong foundation in <span className="text-yellow-100">React, Next.js, MERN Stack, Python, Django, Flask, Kotlin, and Android Development</span>,
           I specialize in creating full-stack applications and AI-driven solutions that solve real-world problems.
           </p>
           <br />
@@ -26,10 +26,10 @@ export default function Home() {
             <h4>🎓 I have earned certifications from {"Harvard's"} CS50 courses, including:</h4>
             <br />
             <ul className="list-disc">
-              <li>CS50x: Mastery of computer science fundamentals</li>
-              <li>CS50AI: Specialization in Artificial Intelligence</li>
-              <li>CS50Python: Proficiency in Python programming</li>
-              <li>CS50SQL: Advanced database management and query optimization</li>
+              <li><span className="text-yellow-100">CS50x</span>: Mastery of computer science fundamentals</li>
+              <li><span className="text-yellow-100">CS50AI</span>: Specialization in Artificial Intelligence</li>
+              <li><span className="text-yellow-100">CS50P</span>: Proficiency in Python programming</li>
+              <li><span className="text-yellow-100">CS50SQL</span>: Advanced database management and query optimization</li>
             </ul>
             <br />
             <p>🔬 My passion extends into AI and Machine Learning, where I explore ways to integrate intelligent systems into applications, improving efficiency and automation.</p>
