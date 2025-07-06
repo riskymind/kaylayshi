@@ -1,0 +1,49 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../app/generated/prisma"
+  previewFeatures = ["driverAdapters"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Project {
+  id           String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  title        String
+  description  String
+  technologies String[]
+  images       String[]
+  githubLink   String
+  demoLink     String
+  createdAt    DateTime @default(now()) @db.Timestamp()
+}
+
+model Experience {
+  id        String    @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  role      String
+  company   String
+  location  String
+  image     String
+  startDate DateTime
+  endDate   DateTime?
+  duties    String[]
+}
+
+model Education {
+  id        String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  degree    String
+  school    String
+  image     String
+  year      String
+  knowledge String[]
+}
+
+model skills {
+  id       String @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  title    String
+  image    String
+  level    String
+  category String
+}

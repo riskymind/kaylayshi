@@ -10,22 +10,21 @@ import clsx from "clsx";
 import { usePathname } from "next/navigation";
 
 const navItems = {
-  "/education": { name: "Education" },
-  "/experience": { name: "Experience" },
-  "/project": { name: "Project" },
-  "/skills": { name: "Skill" },
-  "/asterisk": { name: "Asterisk" }
+  "/admin/education": { name: "Education"},
+  "/admin/experience": { name: "Experience" },
+  "/admin/project": { name: "Project" },
+  "/admin/skill": { name: "Skill" },
 };
 
-export function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
+export function AdminNavbar() {
   const pathname = usePathname()
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <nav className="lg:mb-16 mb-12 py-5">
       <div className="flex flex-col md:flex-row md:items-center justify-between">
         <div className="flex items-center justify-between w-full md:w-auto">
-          <Link href="/" className="text-3xl font-semibold tracking-tight hover:underline hover:underline-offset-8 hover:italic text-gray-800 dark:text-yellow-300 transition-all delay-300">
+          <Link href="/" className="text-3xl font-semibold tracking-tight hover:underline hover:underline-offset-8 hover:italic text-gray-800 dark:text-yellow-300">
             {metaData.title}
           </Link>
 
@@ -42,7 +41,6 @@ export function Navbar() {
         {/* Desktop Navigation */}
         <div className="hidden md:flex flex-row gap-4 mt-6 md:mt-0 md:ml-auto items-center">
           {Object.entries(navItems).map(([path, { name }]) => (
-            
             <Link
               href={path}
               key={path}
@@ -89,15 +87,11 @@ export function Navbar() {
                   transition={{ delay: 0.05 * index, duration: 0.3 }}
                   className="flex flex-col gap-4"
                 >
+                  
                   <Link
                     href={path}
                     onClick={() => setIsOpen(false)}
-                    className={clsx(
-                      'transition-all flex items-center relative',
-                      pathname === path
-                        ? 'dark:text-yellow-300 font-semibold' // Active style
-                        : 'text-neutral-600 hover:text-neutral-800 dark:text-neutral-400 dark:hover:text-neutral-200'
-                    )}
+                    className="transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex text-lg font-semibold w-full py-2"
                   >
                     {name}
                   </Link>
