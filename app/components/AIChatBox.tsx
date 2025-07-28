@@ -76,7 +76,7 @@ export default function AIChatBox({ open, onClose }: AIChatBoxProps) {
               <Bot size={24} />
               <p>Send a message to start the AI chat.</p>
               <p>
-                You can ask the Kaylayshi any question about self and it will
+                You can ask the Chatbot any question about self and it will
                 find the relevant information on this website
               </p>
             </div>
