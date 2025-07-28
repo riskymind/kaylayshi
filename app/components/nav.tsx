@@ -8,6 +8,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import {ThemeSwitch} from "@/app/components/theme-switch"
 import clsx from "clsx";
 import { usePathname } from "next/navigation";
+import AIChatButton from "./AIChatButton";
 
 const navItems = {
   "/education": { name: "Education" },
@@ -56,6 +57,7 @@ export function Navbar() {
               {name}
             </Link>
           ))}
+          <AIChatButton />
           <ThemeSwitch />
         </div>
 
@@ -70,6 +72,7 @@ export function Navbar() {
               className="fixed inset-0 bg-white dark:bg-black bg-opacity-60 z-50 flex flex-col items-start p-6 w-5/6 sm:w-2/3 md:hidden h-full backdrop-blur-lg"
             >
               <div className="flex items-center justify-between w-full pr-4">
+                <AIChatButton />
                 <ThemeSwitch />
                 <button
                   className="self-end mb-4"
