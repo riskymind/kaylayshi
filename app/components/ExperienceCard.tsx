@@ -18,7 +18,7 @@ const ExperienceCard = ({data}: {data: FrontEndExperience}) => {
         {...fadeIn}
         transition={{ delay: 0.2 }}>
        <div className="group w-full h-64 perspective">
-            <div className="relative w-full h-full transition-all transform-style-preserve-3d group-hover:rotate-y-180 ease-in-out delay-150 duration-700">
+            <div className="relative w-full h-full transition-all transform-style-preserve-3d group-hover:rotate-y-180 group-active:rotate-y-180 ease-in-out delay-150 duration-700">
     
                 {/* Front (Image) */}
                 <div className="absolute w-full h-full backface-hidden">
